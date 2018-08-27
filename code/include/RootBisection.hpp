@@ -34,14 +34,43 @@ namespace anpi {
    */
   template<typename T>
   T rootBisection(const std::function<T(T)>& funct,T xl,T xu,const T eps) {
-
+    
+    //not sure if we want this here
+const int MAX_ITERATIONS=40;
     // TODO: Put your code in here!
+//evaluate lower boundary
+  T f_min = funct(xl);
+  int iterations=0;
+  //while the difference between the boundaries is more than the desired accuracy
+    while (xl + eps < xu) {
 
-    // Return NaN if no root was found
-    return std::numeric_limits<T>::quiet_NaN();
+      //calculate mid value and evaluate function
+        T const mid = 0.5 * xl + 0.5 * xu;
+        T const f_mid = funct(mid);
+
+        //if both our mid value and min value are negative
+        //then our mid value is our new lower
+        if ((f_min < 0) && (f_mid < 0)) {
+            xl = mid;
+            f_min = f_mid;
+        } else {//our new upper would me the mid value
+            xu = mid;
+        }
+        ++iterations;
+        if (iterations==MAX_ITERATIONS) return std::numeric_limits<T>::quiet_NaN();
+    }
+
+    return xl;
+    // Return NaN if no root was found 
+}//end if sign of boundaries is different
+
+
+
+
+
   }
 
-}
+
   
 #endif
 

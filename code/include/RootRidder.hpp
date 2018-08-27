@@ -61,7 +61,7 @@ T rootRidder(const std::function<T(T)> &funct, T xi, T xii, const T eps)
       //middle point between our current boundaries
       xm = 0.5 * (xl + xh);
       //evaluate function at middle point
-      fm = func(xm);
+      fm = funct(xm);
 
       //s is used to calculate new boundary xnew
       s = sqrt(fm * fm - fl * fh);
@@ -81,7 +81,7 @@ T rootRidder(const std::function<T(T)> &funct, T xi, T xii, const T eps)
       //set the answer to our estimation
       ans = xnew;
       //evaluate function at estimation
-      fnew = func(ans);
+      fnew = funct(ans);
 
       //if the evaluated function at our estimation is 0
       //we have reached a solution
