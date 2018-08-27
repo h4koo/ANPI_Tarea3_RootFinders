@@ -33,9 +33,22 @@ namespace anpi {
   T rootSecant(const std::function<T(T)>& funct,T xi,T xii,const T eps) {
 
     // TODO: Put your code in here!
-    
+    T Dx;
+	  T p,q,x2;
+	  do {
+        p = xi * funct(xii) - xii * funct(xi);
+        q = funct(xii) - funct(xi);
+        x2 = p / q;
+        Dx = fabs(x2 - xii);
+        xi = xii;
+        xii = x2;
+	  }while (Dx > eps);
+	  //std::cout << xii << std::endl;
+	  return xii;
+	  //return std::numeric_limits<T>::quiet_NaN();
+
     // Return NaN if no root was found
-    return std::numeric_limits<T>::quiet_NaN();
+    //return std::numeric_limits<T>::quiet_NaN();
   }
 
 }
