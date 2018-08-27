@@ -31,13 +31,32 @@ namespace anpi {
    * @throws anpi::Exception if inteval is reversed or both extremes
    *         have same sign.
    */
+  template<typename T>   
+  T dfunct(const std::function<T(T)>& funct,T xi){
+	  double h = 0.00001;
+	  double derivada = 0;
+	  derivada= (funct(xi+h)-funct(xi))/h;
+	  return derivada;
+
+  }
+
+  
   template<typename T>
   T rootNewtonRaphson(const std::function<T(T)>& funct,T xi,const T eps) {
 
     // TODO: Put your code in here!
+    T xii;
+	  T Dx;
+	
+	  do {
+		  xii = xi - funct(xi)/dfunct(funct,xi);
+		  Dx = fabs(xii - xi);
+		  xi = xii;
+	  } while (Dx > eps);
+	  return xii;
 
     // Return NaN if no root was found
-    return std::numeric_limits<T>::quiet_NaN();
+     //return std::numeric_limits<T>::quiet_NaN();
   }
 
 }
