@@ -48,9 +48,9 @@ T rootRidder(const std::function<T(T)> &funct, T xi, T xii, const T eps)
   {
     T xl = xi;
     T xh = xii;
-    
+
     //Initialize with any highly unlikely value, to simplify logic below.**
-    T ans = -9.99e99; 
+    T ans = -9.99e99;
 
     //variables that will hold values for the calculation in the for loop
     T xm, fm, s, xnew, fnew;

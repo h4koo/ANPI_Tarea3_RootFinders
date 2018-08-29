@@ -1,3 +1,5 @@
+Unzip the project, open a terminal and change your working directory to the unzipped folder
+
 Create a directory build:
 
 > mkdir build;
@@ -8,16 +10,35 @@ Go into that directory
 
 You can choose to build a release version with:
 
-> cmake ../ -DCMAKE_BUILD_TYPE=Release
+> cmake ../code -DCMAKE_BUILD_TYPE=Release
 
 or a debug version with
 
-> cmake ../ -DCMAKE_BUILD_TYPE=Debug
+> cmake ../code -DCMAKE_BUILD_TYPE=Debug
 
 And build everything with
 
 > make
 
+To execute the tests go to the /build/benchmarks directory
+
+> cd build/benchmarks
+
+To execute the tests you can use
+
+> ./benchmark -t RootFinders -r detailed
+
+To execute the test that shows tha plots you can use
+
+> ./benchmark -t RootFindersPlotted
+
+RootFindersPlotted will show plots showing the amount of test function calls
+for each epsilon, for ech of the root finding methods. It shows one plot after
+the other for each of the test functions 
+
+
+**********************************************************************************8
+******* Dependencies **********************************************************
 
 To execute the benchmarks you will need python2.7 and python-tk
 
@@ -26,3 +47,5 @@ To execute the benchmarks you will need python2.7 and python-tk
 Additionally, you need matplotlib in python2.7
 
 > pip install --user matplotlib
+
+

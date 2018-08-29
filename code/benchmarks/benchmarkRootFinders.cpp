@@ -38,7 +38,7 @@ namespace bm
 //Pair of vectors used in order to keep the epsilons and function call counts
 //to be ploted
 struct plotPoints
-{ 
+{
   std::vector<double> epsilons;
   std::vector<double> functionCalls;
 };
@@ -252,7 +252,6 @@ void allSolvers(const T start, const T end, const T factor)
   anpi::bm::rootBench<T>(anpi::rootRidder<T>, start, end, factor);
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Added Code for Tarea 3//////////////////////////////////////////////////////////////////////////
@@ -298,7 +297,6 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
   //plot points for each test function
   plotPoints plot_t1, plot_t2, plot_t3, plot_t4;
 
-
   //variable to hold the function call count
   size_t functCallCount = 0;
   //counter to add the poitns
@@ -313,7 +311,7 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
     f_type c1(CallCounter<T>(t1<T>));
     solver(c1, T(0), T(2), eps);
     functCallCount = c1.template target<CallCounter<T>>()->counter();
-     //add points to plot
+    //add points to plot
     plot_t1.epsilons.push_back(eps);
     plot_t1.functionCalls.push_back(functCallCount);
 
@@ -321,7 +319,7 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
     f_type c2(CallCounter<T>(t2<T>));
     solver(c2, T(0), T(2), eps);
     functCallCount = c2.template target<CallCounter<T>>()->counter();
-     //add points to plot
+    //add points to plot
     plot_t2.epsilons.push_back(eps);
     plot_t2.functionCalls.push_back(functCallCount);
 
@@ -329,7 +327,7 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
     f_type c3(CallCounter<T>(t3<T>));
     solver(c3, T(0), T(0.5), eps);
     functCallCount = c3.template target<CallCounter<T>>()->counter();
-     //add points to plot
+    //add points to plot
     plot_t3.epsilons.push_back(eps);
     plot_t3.functionCalls.push_back(functCallCount);
 
@@ -337,7 +335,7 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
     f_type c4(CallCounter<T>(t4<T>));
     solver(c4, T(1), T(3), eps);
     functCallCount = c4.template target<CallCounter<T>>()->counter();
-      //add points to plot
+    //add points to plot
     plot_t4.epsilons.push_back(eps);
     plot_t4.functionCalls.push_back(functCallCount);
   }
@@ -399,7 +397,7 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
     plot_t1.epsilons.push_back(eps);
     plot_t1.functionCalls.push_back(functCallCount);
 
-   // now the same with function t2
+    // now the same with function t2
     f_type c2(CallCounter<T>(t2<T>));
     solver(c2, T(2), eps);
     functCallCount = c2.template target<CallCounter<T>>()->counter();
@@ -407,19 +405,19 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
     plot_t2.epsilons.push_back(eps);
     plot_t2.functionCalls.push_back(functCallCount);
 
-  // now the same with function t3
+    // now the same with function t3
     f_type c3(CallCounter<T>(t3<T>));
     solver(c3, T(0), eps);
     functCallCount = c3.template target<CallCounter<T>>()->counter();
-      //add points to plot
+    //add points to plot
     plot_t3.epsilons.push_back(eps);
     plot_t3.functionCalls.push_back(functCallCount);
 
-// now the same with function t4
+    // now the same with function t4
     f_type c4(CallCounter<T>(t4<T>));
     solver(c4, T(1), eps);
     functCallCount = c4.template target<CallCounter<T>>()->counter();
-      //add points to plot
+    //add points to plot
     plot_t4.epsilons.push_back(eps);
     plot_t4.functionCalls.push_back(functCallCount);
   }
@@ -431,7 +429,6 @@ void rootBench(const std::function<T(const std::function<T(T)> &,
   points.push_back(plot_t3);
   points.push_back(plot_t4);
 }
-
 
 /**
      * Function to create a Plot for each Root Finding method
@@ -461,8 +458,6 @@ void plot(const std::string &legend,
   plotT.show();
 }
 
-
-
 /**
      * Benchmark all solvers using a range of tolerances geometrically changing
      * multiplying from the start point until the end with the given factor.
@@ -476,7 +471,6 @@ void allSolversPlotted(const T start, const T end, const T factor)
 
   //vectors that contain the amount of calls on the specified epsilon for each test function. One for every method
   std::vector<plotPoints> bisectPoints, interpPoints, secPoints, nrPoints, brentPoints, rdrPoints;
-
 
   anpi::bm::rootBench<T>(anpi::rootBisection<T>, start, end, factor, bisectPoints);
 
@@ -512,14 +506,12 @@ void allSolversPlotted(const T start, const T end, const T factor)
                  brentPoints[3].functionCalls, rdrPoints[3].functionCalls);
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////end of added code
 
 } // namespace bm
 } // namespace anpi
-
 
 BOOST_AUTO_TEST_SUITE(RootFinders)
 
