@@ -1,3 +1,8 @@
+You need CMAKE and Boost for bluild the program
+
+> sudo apt-get install libboost-all-dev
+> sudo apt-get -y install cmake
+
 Create a directory build:
 
 > mkdir build;
@@ -17,6 +22,14 @@ or a debug version with
 And build everything with
 
 > make
+
+For run, go into that directory
+
+> cd benchmarks
+
+and run
+
+> ./benchmark
 
 
 To execute the benchmarks you will need python2.7 and python-tk

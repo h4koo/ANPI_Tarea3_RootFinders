@@ -36,6 +36,8 @@ namespace anpi {
   T rootBrent(const std::function<T(T)>& funct,T xl,T xu,const T eps) {
 
     // TODO: Put your code in here!
+
+    //Compara
     if(xu<=xl){
         throw anpi::Exception("reversedinterval") ;
           
