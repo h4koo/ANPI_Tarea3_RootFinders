@@ -1,2 +1,9 @@
 # ANPI_Tarea3_RootFinders
-Métodos de busqueda de raíces
+Jorge Agüero Zamora
+Luis Fernando Murillo Rios
+Nestor Baltodano Duran
+
+
+Métodos de busqueda de raíces.
+
+Para correr el programa leer el readme dentro de la carpeta Code

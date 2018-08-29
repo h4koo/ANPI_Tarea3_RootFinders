@@ -1,0 +1,16 @@
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/CMakeFiles/rebuild_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/CMakeFiles/test.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/CMakeFiles/edit_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/src/CMakeFiles/rebuild_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/src/CMakeFiles/edit_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/src/CMakeFiles/test.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/src/CMakeFiles/anpi.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/src/CMakeFiles/tarea03.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/test/CMakeFiles/rebuild_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/test/CMakeFiles/edit_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/test/CMakeFiles/tester.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/test/CMakeFiles/test.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/benchmarks/CMakeFiles/rebuild_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/benchmarks/CMakeFiles/edit_cache.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/benchmarks/CMakeFiles/benchmark.dir
+/home/acacia/git/ANPI_Tarea3_RootFinders/code/built/benchmarks/CMakeFiles/test.dir
