@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-Unzip the project, open a terminal and change your working directory to the unzipped folder
-=======
-You need CMAKE and Boost for bluild the program
 
-> sudo apt-get install libboost-all-dev
-> sudo apt-get -y install cmake
->>>>>>> e9674d98bd2ff8f46a2fcacc0ef26c5425b0269a
+**********************************************************************************
+************************* How To Run *********************************************
+**********************************************************************************
+
+Unzip the project, open a terminal and change your working directory to the unzipped folder
 
 Create a directory build:
 
@@ -27,7 +25,6 @@ And build everything with
 
 > make
 
-<<<<<<< HEAD
 To execute the tests go to the /build/benchmarks directory
 
 > cd build/benchmarks
@@ -45,18 +42,9 @@ for each epsilon, for ech of the root finding methods. It shows one plot after
 the other for each of the test functions 
 
 
-**********************************************************************************8
-******* Dependencies **********************************************************
-=======
-For run, go into that directory
-
-> cd benchmarks
-
-and run
-
-> ./benchmark
-
->>>>>>> e9674d98bd2ff8f46a2fcacc0ef26c5425b0269a
+**********************************************************************************
+******************* Dependencies *************************************************
+**********************************************************************************
 
 To execute the benchmarks you will need python2.7 and python-tk
 
@@ -66,4 +54,13 @@ Additionally, you need matplotlib in python2.7
 
 > pip install --user matplotlib
 
+You need CMAKE and Boost to build the program
 
+> sudo apt-get install libboost-all-dev
+> sudo apt-get -y install cmake
+
+
+
+Extra notes:
+This project can also be found at GitHub in:
+https://github.com/h4koo/ANPI_Tarea3_RootFinders
