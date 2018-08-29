@@ -16,6 +16,7 @@
 #include <ostream>
 #include <fstream>
 #include <limits>
+#include "Matrix.hpp"
 
 //#include <Matrix.hpp>
 #include <PlotPy.hpp>
