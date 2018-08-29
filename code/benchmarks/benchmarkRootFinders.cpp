@@ -491,17 +491,17 @@ void allSolversPlotted(const T start, const T end, const T factor)
                  brentPoints[0].functionCalls, rdrPoints[0].functionCalls);
 
   //for test function t2
-  anpi::bm::plot("Test Function T2: e^(-x²) = e^(-(x-3)²/3 )", bisectPoints[1].epsilons, bisectPoints[1].functionCalls,
+  anpi::bm::plot("Test Function T2: e^(-(x^2) = e^(-((x-3)^2)/3 )", bisectPoints[1].epsilons, bisectPoints[1].functionCalls,
                  interpPoints[1].functionCalls, secPoints[1].functionCalls, nrPoints[1].functionCalls,
                  brentPoints[1].functionCalls, rdrPoints[1].functionCalls);
 
   //for test function t3
-  anpi::bm::plot("Test Function T3: x² = atan(x)", bisectPoints[2].epsilons, bisectPoints[2].functionCalls,
+  anpi::bm::plot("Test Function T3: x^2 = atan(x)", bisectPoints[2].epsilons, bisectPoints[2].functionCalls,
                  interpPoints[2].functionCalls, secPoints[2].functionCalls, nrPoints[2].functionCalls,
                  brentPoints[2].functionCalls, rdrPoints[2].functionCalls);
 
   //for test function t4
-  anpi::bm::plot("Test Function T4: (x-2)⊃3; + 0.01(x-2)", bisectPoints[3].epsilons, bisectPoints[3].functionCalls,
+  anpi::bm::plot("Test Function T4: (x-2)^3 + 0.01(x-2)", bisectPoints[3].epsilons, bisectPoints[3].functionCalls,
                  interpPoints[3].functionCalls, secPoints[3].functionCalls, nrPoints[3].functionCalls,
                  brentPoints[3].functionCalls, rdrPoints[3].functionCalls);
 }
